@@ -1,8 +1,8 @@
 var app = require("express")();
-var http = require("http").createServer(app);
+var server = require("http").createServer(app);
 
 // Initialize a new instance, passing http in it
-var io = require("socket.io")(http);
+var io = require("socket.io")(server);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
@@ -21,6 +21,6 @@ io.on("connection", (socket) => {
     console.log("user disconnected");
   });
 });
-http.listen(3000, () => {
+server.listen(3000, () => {
   console.log("listening on *:3000");
 });

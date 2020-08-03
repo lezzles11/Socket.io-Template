@@ -70,7 +70,7 @@ io.on("connection", (socket) => {
 
 #### Credits :recycle:
 
-[Jest](https://jestjs.io/)
+[Socket.io](https://socket.io/)
 
 #### Contributing :round_pushpin:
 
